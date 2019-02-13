@@ -11,5 +11,5 @@ set cursorline
 set textwidth=80
 EOF
 
-chown developer:developer -R /home/${USERNAME}
+chown ${USERNAME}:${USERNAME} -R /home/${USERNAME}
 # Enable Ansible venv at log in
