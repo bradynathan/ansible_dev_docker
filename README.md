@@ -27,3 +27,5 @@ The Environment variables can be configured in the `Dockerfile` to alter contain
     CONTAINER ID        IMAGE                     COMMAND               CREATED             STATUS              PORTS                   NAMES
     5e3bc001572c        <username>/ssh:ansible   "/usr/sbin/sshd -d"   11 seconds ago      Up 10 seconds       0.0.0.0:32770->22/tcp   vigorous_hoover
     $ ssh developer@localhost -p 32770
+
+Note:  You can not use localhost on Windows.  Use `docker-machine` to get the IP and tool like PuTTY to connect. 
