@@ -10,7 +10,7 @@ ENV PYCURL_SSL_LIBRARY openssl
 
 WORKDIR /root
 
-RUN yum install -y git gcc python krb5-devel openssl-devel libcurl-devel sshpass vim openssh-server passwd; yum clean all
+RUN yum install -y git gcc python krb5-devel openssl-devel libcurl-devel sshpass vim openssh-server passwd wget curl bind-utils iputils bash-completion man; yum clean all
 
 ADD scripts /root/scripts
 RUN /bin/bash /root/scripts/sshd_config.sh
