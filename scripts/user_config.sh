@@ -13,4 +13,7 @@ set textwidth=80
 EOF
 
 chown ${USERNAME}:${USERNAME} -R /home/${USERNAME}
+
+# Set up bash environment
+echo "export PYCURL_SSL_LIBRARY=${PYCURL_SSL_LIBRARY}" >> /home/${USERNAME}/.bashrc
 # Enable Ansible venv at log in
