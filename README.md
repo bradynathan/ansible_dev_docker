@@ -11,6 +11,7 @@ The Environment variables can be configured in the `Dockerfile` to alter contain
     ENV USERNAME developer # User name for logging in
     ENV PASSWORD developer # Password for logging in
     ENV PYPI_INDEX https://pypi.org/simple # Modify to use an internal repository (no trailing slash)
+    # ENV PYPI_EXTRA_INDEX https://pypi.org/simple # Uncomment and update to add additional repository
     ENV ANSIBLE_VERSION 2.7 # Can be expressed in x.x.x or x.x
     ENV VENV_PATH /opt/venv # This is a good directory
     ENV VENV_NAME ansible # This is a good name

@@ -5,6 +5,7 @@ MAINTAINER https://github.com/bradynathan
 ENV USERNAME developer
 ENV PASSWORD developer
 ENV PYPI_INDEX https://pypi.org/simple
+# ENV PYPI_EXTRA_INDEX https://pypi.org/simple
 ENV ANSIBLE_VERSION 2.7
 ENV VENV_PATH /opt/venv
 ENV VENV_NAME ansible
