@@ -3,6 +3,7 @@
 # Create the user
 useradd -c "Interactive SSH Account" ${USERNAME}
 echo -e "${PASSWORD}\n${PASSWORD}" | (passwd --stdin ${USERNAME})
+usermod -aG wheel ${USERNAME}
 
 # Update vim settings
 cat <<EOF > /home/${USERNAME}/.vimrc
