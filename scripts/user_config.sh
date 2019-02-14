@@ -16,4 +16,5 @@ chown ${USERNAME}:${USERNAME} -R /home/${USERNAME}
 
 # Set up bash environment
 echo "export PYCURL_SSL_LIBRARY=${PYCURL_SSL_LIBRARY}" >> /home/${USERNAME}/.bashrc
+echo "source ${VENV_PATH}/${VENV_NAME}/bin/activate"  >> /home/${USERNAME}/.bashrc
 # Enable Ansible venv at log in
