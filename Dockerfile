@@ -21,4 +21,4 @@ RUN /bin/bash /root/scripts/user_config.sh
 #
 # EXPOSE 22
 #
-ENTRYPOINT ["/usr/sbin/sshd", "-d"]
+ENTRYPOINT ["/usr/bin/supervisord"]

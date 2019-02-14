@@ -11,3 +11,18 @@ sed -i 's/#UseDNS yes/UseDNS no/g' /etc/ssh/sshd_config
 
 # Enable password authentication
 sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
+
+pip install supervisor
+
+cat <<EOF > /etc/supervisord.conf
+[supervisord]
+nodaemon=true
+pidfile = /run/supervisord.pid
+# It seems that it's not possible to swith this log to NONE (it creates NONE logfile)
+logfile = /dev/null
+# Set loglevel=debug, only then all logs from child services are printed out
+loglevel = debug
+
+[program:sshd]
+command=/usr/sbin/sshd -D
+EOF
